@@ -66,19 +66,32 @@ The IAM User Management Automation Tool is a Python-based project that automates
 
     To list all IAM users and their tags, ensure that the function call is included in the main script.
 
-## Project Structure
-* iam_user_management/
-* ├── main.py
-* ├── requirements.txt
-* ├── users.csv
-* ├── README.md
-* └── utils.py
+## Project Architecture Overview
 
-- `main.py`: The main script to run the IAM tasks.
-- `requirements.txt`: List of required packages.
-- `users.csv`: CSV file with user information.
-- `README.md`: Project documentation.
-- `utils.py`: Utility functions for IAM operations.
+#### **AWS IAM Service**
+The core service used for managing identities and permissions within AWS. The project interacts with IAM to perform tasks such as user management, policy attachment, and group management.
+
+#### **Python Scripts**
+
+* utils.py: Contains functions for AWS IAM operations such as creating users, attaching/detaching policies, tagging users, managing groups, and deleting policies.
+* main.py: The entry point for the project that orchestrates the operations by reading input data from a CSV file, executing the necessary IAM actions, and providing logging for visibility.
+* CSV File (users.csv)
+
+**Contains user information, including user names, policy ARNs, tags, and group names. This file serves as the input data source for the scripts.
+Logging**
+
+**Integrated logging to capture and report the outcomes of each operation. Logs are used to monitor script execution, success messages, and any errors encountered.
+Dependencies (requirements.txt)**
+
+#### **Lists the necessary Python packages required to run the scripts, including boto3 for AWS SDK and logging for capturing events.**
+#### **Workflow:**
+
+* Load Data: Read user data from users.csv.
+* Create Resources: Create IAM users and groups.
+* Attach Policies: Apply policies to users.
+* Tag Users: Add tags to users.
+* Manage Groups: Add or remove users from groups.
+* Logging and Monitoring: Log all actions and handle errors.
 
 ## Functionality
 
