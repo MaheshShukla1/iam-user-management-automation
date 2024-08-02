@@ -1,0 +1,3 @@
+UserName,PolicyArn,TagKey,TagValue,GroupName
+alice,arn:aws:iam::aws:policy/AdministratorAccess,Department,IT,Admins
+bob,arn:aws:iam::aws:policy/ReadOnlyAccess,Department,HR,Viewers
