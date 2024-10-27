@@ -23,7 +23,7 @@ The IAM User Management Automation Tool is a Python-based solution designed to s
 
 1. **Clone the Repository**
 ```bash
-git clone https://github.com/yourusername/iam-user-management-automation.git
+git clone  https://github.com/yourusername/iam-user-management-automation.git
 cd iam-user-management-automation
 ```
 **Install Dependencies**
